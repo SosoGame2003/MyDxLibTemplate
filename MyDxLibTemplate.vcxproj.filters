@@ -5,10 +5,22 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Source\MySystem">
+      <UniqueIdentifier>{f8a298a7-c685-4d80-af15-6c96eb9e8eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MySystem\Application">
+      <UniqueIdentifier>{4ea12fa9-b66d-4fd3-a356-eadb4ec1ea3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MySystem\Window">
+      <UniqueIdentifier>{1324ec6d-5d77-43af-b0d2-a4a463d0b7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MySystem\ProcessingControl">
+      <UniqueIdentifier>{9d592bcf-de4d-4427-844c-39724c497b73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\MySystem</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
