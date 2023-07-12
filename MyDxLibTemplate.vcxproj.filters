@@ -22,5 +22,25 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source\MySystem</Filter>
     </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source\MySystem\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessingControl.cpp">
+      <Filter>Source\MySystem\ProcessingControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source\MySystem\Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window.h">
+      <Filter>Source\MySystem\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessingControl.h">
+      <Filter>Source\MySystem\ProcessingControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Source\MySystem\Application</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
