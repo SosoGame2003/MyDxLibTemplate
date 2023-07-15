@@ -55,9 +55,6 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Source\Scene\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="SceneBase.cpp">
-      <Filter>Source\Scene\Base</Filter>
-    </ClCompile>
     <ClCompile Include="Title.cpp">
       <Filter>Source\Scene\Title</Filter>
     </ClCompile>

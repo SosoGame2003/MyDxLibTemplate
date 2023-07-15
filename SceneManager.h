@@ -1,18 +1,23 @@
-#pragma once
+#pragma once	// インクルードガード
+
+class Scene;
 
 class SceneManager
 {
 public:
-	enum class SCENE
-	{
-		TITLE = 0,	// タイトル
-		TUTORIAL,	// 操作説明
-		PLAY,		// プレイ
-		RESULT,		// リザルト
-	};
+	SceneManager();
+	~SceneManager();
 
+	void Initialize();
+	bool Update();
+	void Draw();
+	void Finalize();
 
+	Scene* GetTitle();
+	Scene* GetTutorial();
+	Scene* GetPlay();
+	Scene* GetResult();
 
 private:
-
+	Scene* mScene;
 };

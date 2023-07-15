@@ -135,7 +135,6 @@
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="ProcessingControl.cpp" />
     <ClCompile Include="Result.cpp" />
-    <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Title.cpp" />
     <ClCompile Include="Tutorial.cpp" />
