@@ -38,6 +38,18 @@
     <Filter Include="Source\Scene\Result">
       <UniqueIdentifier>{3b99f888-2b04-4950-894e-1afd36f302cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GameObject">
+      <UniqueIdentifier>{2b43ae49-fa39-442c-a35f-0b89017ac96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameObject\Player">
+      <UniqueIdentifier>{625cd5ca-7734-4447-a023-c79fc31eb4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameObject\Manager">
+      <UniqueIdentifier>{1941dc6c-e2cd-4d74-8901-2302a527a5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameObject\GameObjectBase">
+      <UniqueIdentifier>{b95d6497-5160-4e0f-9a27-87f2f6540caf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -67,6 +79,12 @@
     <ClCompile Include="Result.cpp">
       <Filter>Source\Scene\Result</Filter>
     </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>Source\GameObject\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source\GameObject\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -95,6 +113,15 @@
     </ClInclude>
     <ClInclude Include="Result.h">
       <Filter>Source\Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>Source\GameObject\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectBase.h">
+      <Filter>Source\GameObject\GameObjectBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
