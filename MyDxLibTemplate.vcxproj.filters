@@ -17,6 +17,27 @@
     <Filter Include="Source\MySystem\ProcessingControl">
       <UniqueIdentifier>{9d592bcf-de4d-4427-844c-39724c497b73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Scene">
+      <UniqueIdentifier>{e0cd9519-ea7e-40d2-b608-b9653ea5d604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Manager">
+      <UniqueIdentifier>{789083c6-b8d3-4682-aafd-9e8d4b97f03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Base">
+      <UniqueIdentifier>{299fca1e-e48a-4814-831e-ddc863d166dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Title">
+      <UniqueIdentifier>{4de276af-c0f8-42ae-a552-c0d5ca63989e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Tutorial">
+      <UniqueIdentifier>{29dc5b98-244c-4a51-a89d-e6cae4f8d38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Play">
+      <UniqueIdentifier>{66f8a574-0431-424f-8680-9bf38651a4d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Result">
+      <UniqueIdentifier>{3b99f888-2b04-4950-894e-1afd36f302cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -31,6 +52,24 @@
     <ClCompile Include="Application.cpp">
       <Filter>Source\MySystem\Application</Filter>
     </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source\Scene\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>Source\Scene\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>Source\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Tutorial.cpp">
+      <Filter>Source\Scene\Tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>Source\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="Result.cpp">
+      <Filter>Source\Scene\Result</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -41,6 +80,24 @@
     </ClInclude>
     <ClInclude Include="Application.h">
       <Filter>Source\MySystem\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Source\Scene\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>Source\Scene\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>Source\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Tutorial.h">
+      <Filter>Source\Scene\Tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>Source\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>Source\Scene\Result</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
