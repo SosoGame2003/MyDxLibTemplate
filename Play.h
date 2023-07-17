@@ -9,9 +9,25 @@ public:
 	Play();
 	virtual ~Play();
 
+	/// <summary>
+	/// ‰Šú‰»ˆ—
+	/// </summary>
 	void Initialize() override;
+
+	/// <summary>
+	/// XVˆ—
+	/// </summary>
+	/// <returns></returns>
 	Scene* Update() override;
+
+	/// <summary>
+	/// •`‰æˆ—
+	/// </summary>
 	void Draw() override;
+
+	/// <summary>
+	/// Œãˆ—
+	/// </summary>
 	void Finalize() override;
 
 private:

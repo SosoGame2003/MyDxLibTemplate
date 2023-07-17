@@ -29,5 +29,5 @@ public:
 	void Finalize();
 
 private:
-	ProcessingControl* processCtrl;
+	ProcessingControl* mProcessCtrl;
 };

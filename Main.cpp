@@ -3,12 +3,12 @@
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
-	Application* app;
-	app = new Application;
+	Application* mApp;
+	mApp = new Application;
 
-	app->Initialize();
-	app->GameLoop();
-	app->Finalize();
+	mApp->Initialize();
+	mApp->GameLoop();
+	mApp->Finalize();
 
 	return 0;
 }

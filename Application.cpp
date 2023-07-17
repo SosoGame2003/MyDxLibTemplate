@@ -5,7 +5,7 @@ Application::Application()
 {
 	DxLib_Init();	// DXライブラリ初期化処理
 
-	processCtrl = new ProcessingControl();
+	mProcessCtrl = new ProcessingControl();
 }
 
 Application::~Application()
@@ -14,7 +14,7 @@ Application::~Application()
 
 void Application::Initialize()
 {
-	processCtrl->Initialize();
+	mProcessCtrl->Initialize();
 }
 
 void Application::GameLoop()
@@ -25,10 +25,10 @@ void Application::GameLoop()
 		ClearDrawScreen();	// 画面更新処理
 
 		// 更新処理
-		processCtrl->Update();
+		mProcessCtrl->Update();
 
 		// 描画処理
-		processCtrl->Draw();
+		mProcessCtrl->Draw();
 
 		ScreenFlip();	// 描画確定
 
@@ -42,9 +42,9 @@ void Application::GameLoop()
 
 void Application::Finalize()
 {
-	processCtrl->Finalize();
-	delete processCtrl;
-	processCtrl = nullptr;
+	mProcessCtrl->Finalize();
+	delete mProcessCtrl;
+	mProcessCtrl = nullptr;
 
 	DxLib_End();	// DXライブラリ終了処理
 }

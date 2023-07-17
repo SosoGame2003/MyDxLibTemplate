@@ -3,7 +3,7 @@
 
 ProcessingControl::ProcessingControl()
 {
-	window = new Window();
+	mWindow = new Window();
 }
 
 ProcessingControl::~ProcessingControl()
@@ -12,7 +12,7 @@ ProcessingControl::~ProcessingControl()
 
 void ProcessingControl::Initialize()
 {
-	window->Show();
+	mWindow->Show();
 }
 
 void ProcessingControl::Update()
@@ -25,6 +25,6 @@ void ProcessingControl::Draw()
 
 void ProcessingControl::Finalize()
 {
-	delete window;
-	window = nullptr;
+	delete mWindow;
+	mWindow = nullptr;
 }

@@ -8,9 +8,25 @@ public:
 	SceneManager();
 	~SceneManager();
 
+	/// <summary>
+	/// ‰Šú‰»ˆ—
+	/// </summary>
 	void Initialize();
+
+	/// <summary>
+	/// XVˆ—
+	/// </summary>
+	/// <returns></returns>
 	bool Update();
+
+	/// <summary>
+	/// •`‰æˆ—
+	/// </summary>
 	void Draw();
+
+	/// <summary>
+	/// Œãˆ—
+	/// </summary>
 	void Finalize();
 
 	Scene* GetTitle();

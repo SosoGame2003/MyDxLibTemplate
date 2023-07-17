@@ -2,6 +2,8 @@
 
 // 必要なヘッダーファイルをインクルード
 #include"Window.h"
+#include"SceneManager.h"
+#include"GameObjectManager.h"
 
 /// <summary>
 /// 処理統括
@@ -33,5 +35,5 @@ public:
 	void Finalize();
 
 private:
-	Window* window;
+	Window* mWindow;
 };

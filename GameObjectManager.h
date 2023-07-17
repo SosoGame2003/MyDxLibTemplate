@@ -5,8 +5,29 @@ class GameObject;
 class GameObjectManager
 {
 public:
+	GameObjectManager();
+	~GameObjectManager();
 
+	/// <summary>
+	/// ‰Šú‰»ˆ—
+	/// </summary>
+	void Initialize();
+
+	/// <summary>
+	/// XVˆ—
+	/// </summary>
+	void Update();
+
+	/// <summary>
+	/// •`‰æˆ—
+	/// </summary>
+	void Draw();
+
+	/// <summary>
+	/// Œãˆ—
+	/// </summary>
+	void Finalize();
 
 private:
-
+	GameObject* mGameObject;
 };

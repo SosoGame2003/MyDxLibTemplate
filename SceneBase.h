@@ -8,9 +8,25 @@ protected:
 public:
 	virtual ~Scene() = default;
 
+	/// <summary>
+	/// ‰Šú‰»ˆ—
+	/// </summary>
 	virtual void Initialize() = 0;
+
+	/// <summary>
+	/// XVˆ—
+	/// </summary>
+	/// <returns></returns>
 	virtual Scene* Update() = 0;
+
+	/// <summary>
+	/// •`‰æˆ—
+	/// </summary>
 	virtual void Draw() = 0;
+
+	/// <summary>
+	/// Œãˆ—
+	/// </summary>
 	virtual void Finalize() = 0;
 
 private:
