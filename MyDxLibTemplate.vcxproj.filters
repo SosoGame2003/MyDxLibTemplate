@@ -47,7 +47,7 @@
     <Filter Include="Source\GameObject\Manager">
       <UniqueIdentifier>{1941dc6c-e2cd-4d74-8901-2302a527a5ef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\GameObject\GameObjectBase">
+    <Filter Include="Source\GameObject\Base">
       <UniqueIdentifier>{b95d6497-5160-4e0f-9a27-87f2f6540caf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -121,7 +121,7 @@
       <Filter>Source\GameObject\Player</Filter>
     </ClInclude>
     <ClInclude Include="GameObjectBase.h">
-      <Filter>Source\GameObject\GameObjectBase</Filter>
+      <Filter>Source\GameObject\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
