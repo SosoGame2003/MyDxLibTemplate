@@ -1,27 +1,30 @@
 // 必要なヘッダーファイルをインクルード
 #include"Play.h"
 
-Play::Play()
+namespace Scene
 {
-}
+	Play::Play()
+	{
+	}
 
-Play::~Play()
-{
-}
+	Play::~Play()
+	{
+	}
 
-void Play::Initialize()
-{
-}
+	void Play::Initialize()
+	{
+	}
 
-Scene* Play::Update()
-{
-	return this;
-}
+	Scene* Play::Update()
+	{
+		return this;
+	}
 
-void Play::Draw()
-{
-}
+	void Play::Draw()
+	{
+	}
 
-void Play::Finalize()
-{
+	void Play::Finalize()
+	{
+	}
 }

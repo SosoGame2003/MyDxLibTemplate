@@ -1,39 +1,42 @@
 #pragma once	// インクルードガード
 
-class Scene;
-
-class SceneManager
+namespace Scene
 {
-public:
-	SceneManager();
-	~SceneManager();
+	class Scene;
 
-	/// <summary>
-	/// 初期化処理
-	/// </summary>
-	void Initialize();
+	class SceneManager
+	{
+	public:
+		SceneManager();
+		~SceneManager();
 
-	/// <summary>
-	/// 更新処理
-	/// </summary>
-	/// <returns></returns>
-	bool Update();
+		/// <summary>
+		/// 初期化処理
+		/// </summary>
+		void Initialize();
 
-	/// <summary>
-	/// 描画処理
-	/// </summary>
-	void Draw();
+		/// <summary>
+		/// 更新処理
+		/// </summary>
+		/// <returns></returns>
+		bool Update();
 
-	/// <summary>
-	/// 後処理
-	/// </summary>
-	void Finalize();
+		/// <summary>
+		/// 描画処理
+		/// </summary>
+		void Draw();
 
-	Scene* GetTitle();
-	Scene* GetTutorial();
-	Scene* GetPlay();
-	Scene* GetResult();
+		/// <summary>
+		/// 後処理
+		/// </summary>
+		void Finalize();
 
-private:
-	Scene* mScene;
-};
+		Scene* GetTitle();
+		Scene* GetTutorial();
+		Scene* GetPlay();
+		Scene* GetResult();
+
+	private:
+		Scene* mScene;
+	};
+}

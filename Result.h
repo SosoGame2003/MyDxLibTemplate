@@ -3,33 +3,36 @@
 // 必要なヘッダーファイルをインクルード
 #include"SceneBase.h"
 
-class Result : public Scene
+namespace Scene
 {
-public:
-	Result();
-	virtual ~Result();
+	class Result : public Scene
+	{
+	public:
+		Result();
+		virtual ~Result();
 
-	/// <summary>
-	/// 初期化処理
-	/// </summary>
-	void Initialize() override;
+		/// <summary>
+		/// 初期化処理
+		/// </summary>
+		void Initialize() override;
 
-	/// <summary>
-	/// 更新処理
-	/// </summary>
-	/// <returns></returns>
-	Scene* Update() override;
+		/// <summary>
+		/// 更新処理
+		/// </summary>
+		/// <returns></returns>
+		Scene* Update() override;
 
-	/// <summary>
-	/// 描画処理
-	/// </summary>
-	void Draw() override;
+		/// <summary>
+		/// 描画処理
+		/// </summary>
+		void Draw() override;
 
-	/// <summary>
-	/// 後処理
-	/// </summary>
-	void Finalize() override;
+		/// <summary>
+		/// 後処理
+		/// </summary>
+		void Finalize() override;
 
-private:
+	private:
 
-};
+	};
+}

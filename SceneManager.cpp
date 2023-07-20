@@ -5,67 +5,70 @@
 #include"Play.h"
 #include"Result.h"
 
-SceneManager::SceneManager()
-	: mScene(new Title)
+namespace Scene
 {
-}
-
-SceneManager::~SceneManager()
-{
-}
-
-void SceneManager::Initialize()
-{
-}
-
-bool SceneManager::Update()
-{
-	Scene* pScene = mScene->Update();
-
-	if (pScene == nullptr)
+	SceneManager::SceneManager()
+		: mScene(new Title)
 	{
-		return false;
 	}
 
-	if (pScene != mScene)
+	SceneManager::~SceneManager()
 	{
-		delete mScene;
-		mScene = pScene;
 	}
 
-	return true;
-}
-
-void SceneManager::Draw()
-{
-	mScene->Draw();
-}
-
-void SceneManager::Finalize()
-{
-	if (mScene)
+	void SceneManager::Initialize()
 	{
-		delete mScene;
-		mScene = nullptr;
 	}
-}
 
-Scene* SceneManager::GetTitle()
-{
-	return new Title;
-}
+	bool SceneManager::Update()
+	{
+		Scene* pScene = mScene->Update();
 
-Scene* SceneManager::GetTutorial()
-{
-	return new Tutorial;
-}
+		if (pScene == nullptr)
+		{
+			return false;
+		}
 
-Scene* SceneManager::GetPlay()
-{
-	return new Play;
-}
+		if (pScene != mScene)
+		{
+			delete mScene;
+			mScene = pScene;
+		}
 
-Scene* SceneManager::GetResult()
-{
-	return new Result;
+		return true;
+	}
+
+	void SceneManager::Draw()
+	{
+		mScene->Draw();
+	}
+
+	void SceneManager::Finalize()
+	{
+		if (mScene)
+		{
+			delete mScene;
+			mScene = nullptr;
+		}
+	}
+
+	Scene* SceneManager::GetTitle()
+	{
+		return new Title;
+	}
+
+	Scene* SceneManager::GetTutorial()
+	{
+		return new Tutorial;
+	}
+
+	Scene* SceneManager::GetPlay()
+	{
+		return new Play;
+	}
+
+	Scene* SceneManager::GetResult()
+	{
+		return new Result;
+	}
 }

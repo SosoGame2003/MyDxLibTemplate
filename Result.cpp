@@ -2,27 +2,30 @@
 
 // 必要なヘッダーファイルをインクルード
 
-Result::Result()
+namespace Scene
 {
-}
+	Result::Result()
+	{
+	}
 
-Result::~Result()
-{
-}
+	Result::~Result()
+	{
+	}
 
-void Result::Initialize()
-{
-}
+	void Result::Initialize()
+	{
+	}
 
-Scene* Result::Update()
-{
-	return this;
-}
+	Scene* Result::Update()
+	{
+		return this;
+	}
 
-void Result::Draw()
-{
-}
+	void Result::Draw()
+	{
+	}
 
-void Result::Finalize()
-{
+	void Result::Finalize()
+	{
+	}
 }

@@ -1,27 +1,30 @@
 // 必要なヘッダーファイルをインクルード
 #include"Tutorial.h"
 
-Tutorial::Tutorial()
+namespace Scene
 {
-}
+	Tutorial::Tutorial()
+	{
+	}
 
-Tutorial::~Tutorial()
-{
-}
+	Tutorial::~Tutorial()
+	{
+	}
 
-void Tutorial::Initialize()
-{
-}
+	void Tutorial::Initialize()
+	{
+	}
 
-Scene* Tutorial::Update()
-{
-	return this;
-}
+	Scene* Tutorial::Update()
+	{
+		return this;
+	}
 
-void Tutorial::Draw()
-{
-}
+	void Tutorial::Draw()
+	{
+	}
 
-void Tutorial::Finalize()
-{
+	void Tutorial::Finalize()
+	{
+	}
 }
