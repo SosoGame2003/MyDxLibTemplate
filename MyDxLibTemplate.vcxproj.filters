@@ -50,6 +50,9 @@
     <Filter Include="Source\GameObject\Base">
       <UniqueIdentifier>{b95d6497-5160-4e0f-9a27-87f2f6540caf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Scene\Tag">
+      <UniqueIdentifier>{133c83ed-2f8f-42d0-bf2e-3df55d96fc47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -67,7 +70,7 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Source\Scene\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Title.cpp">
+    <ClCompile Include="MainMenu.cpp">
       <Filter>Source\Scene\Title</Filter>
     </ClCompile>
     <ClCompile Include="Tutorial.cpp">
@@ -102,7 +105,7 @@
     <ClInclude Include="SceneBase.h">
       <Filter>Source\Scene\Base</Filter>
     </ClInclude>
-    <ClInclude Include="Title.h">
+    <ClInclude Include="MainMenu.h">
       <Filter>Source\Scene\Title</Filter>
     </ClInclude>
     <ClInclude Include="Tutorial.h">
@@ -122,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="GameObjectBase.h">
       <Filter>Source\GameObject\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTag.h">
+      <Filter>Source\Scene\Tag</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

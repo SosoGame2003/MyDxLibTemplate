@@ -1,37 +1,40 @@
 #pragma once	// インクルードガード
 
+// 必要なヘッダーファイルをインクルード
+#include"SceneTag.h"
+
+/// <summary>
+/// 各シーンの基底クラス
+/// </summary>
 namespace Scene
 {
-	class Scene
+	class SceneBase
 	{
-	protected:
-		Scene() {}
-
 	public:
-		virtual ~Scene() = default;
-
-		/// <summary>
-		/// 初期化処理
-		/// </summary>
-		virtual void Initialize() = 0;
+		SceneBase();
+		virtual ~SceneBase() {};
 
 		/// <summary>
 		/// 更新処理
 		/// </summary>
-		/// <returns></returns>
-		virtual Scene* Update() = 0;
+		virtual void Update() {};
 
 		/// <summary>
 		/// 描画処理
 		/// </summary>
-		virtual void Draw() = 0;
+		virtual void Draw() {};
 
 		/// <summary>
-		/// 後処理
+		/// シーンタグ所得用関数
 		/// </summary>
-		virtual void Finalize() = 0;
+		/// <returns>シーンのタグ</returns>
+		virtual SceneTag GetSceneTag();
 
-	private:
-
+	protected:
+		SceneTag* nextScene;
 	};
+
+	inline SceneBase::SceneBase() : nextScene() {};
+
+	inline SceneTag SceneBase::GetSceneTag() { return SceneTag::DUMMY; }
 }

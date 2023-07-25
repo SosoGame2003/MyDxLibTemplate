@@ -5,6 +5,8 @@
 #include"SceneManager.h"
 #include"GameObjectManager.h"
 
+using namespace Scene;
+
 /// <summary>
 /// ˆ—“Š‡
 /// </summary>
@@ -36,4 +38,5 @@ public:
 
 private:
 	Window* mWindow;
+	SceneManager sceneManager;
 };

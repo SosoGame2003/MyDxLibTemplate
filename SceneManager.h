@@ -1,9 +1,17 @@
 #pragma once	// インクルードガード
 
+// 必要なヘッダーファイルをインクルード
+#include"SceneBase.h"
+#include"MainMenu.h"
+#include"Tutorial.h"
+#include"Play.h"
+#include"Result.h"
+
+/// <summary>
+/// シーン管理クラス
+/// </summary>
 namespace Scene
 {
-	class Scene;
-
 	class SceneManager
 	{
 	public:
@@ -11,32 +19,17 @@ namespace Scene
 		~SceneManager();
 
 		/// <summary>
-		/// 初期化処理
-		/// </summary>
-		void Initialize();
-
-		/// <summary>
 		/// 更新処理
 		/// </summary>
-		/// <returns></returns>
-		bool Update();
+		void Update();
 
 		/// <summary>
 		/// 描画処理
 		/// </summary>
 		void Draw();
 
-		/// <summary>
-		/// 後処理
-		/// </summary>
-		void Finalize();
-
-		Scene* GetTitle();
-		Scene* GetTutorial();
-		Scene* GetPlay();
-		Scene* GetResult();
-
 	private:
-		Scene* mScene;
+		SceneBase* nowScene;	// 現在のシーン
+		SceneTag scene;			// 動作しているシーンのタグ
 	};
 }

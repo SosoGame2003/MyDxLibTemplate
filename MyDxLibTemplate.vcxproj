@@ -138,7 +138,7 @@
     <ClCompile Include="ProcessingControl.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Tutorial.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -152,7 +152,8 @@
     <ClInclude Include="Result.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="SceneTag.h" />
     <ClInclude Include="Tutorial.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

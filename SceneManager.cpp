@@ -1,74 +1,52 @@
 // 必要なヘッダーファイルをインクルード
 #include"SceneManager.h"
-#include"Title.h"
-#include"Tutorial.h"
-#include"Play.h"
-#include"Result.h"
 
 namespace Scene
 {
 	SceneManager::SceneManager()
-		: mScene(new Title)
 	{
+		scene = SceneTag::MENU;
+		nowScene = new MainMenu(&scene);
 	}
 
 	SceneManager::~SceneManager()
 	{
+		nowScene->~SceneBase();
 	}
 
-	void SceneManager::Initialize()
+	void SceneManager::Update()
 	{
-	}
-
-	bool SceneManager::Update()
-	{
-		Scene* pScene = mScene->Update();
-
-		if (pScene == nullptr)
+		if (nowScene->GetSceneTag() != scene)
 		{
-			return false;
-		}
+			nowScene->~SceneBase();
 
-		if (pScene != mScene)
-		{
-			delete mScene;
-			mScene = pScene;
-		}
+			switch (scene)
+			{
+			case SceneTag::MENU:
+				nowScene = new MainMenu(&scene);
+				return;
 
-		return true;
+			case SceneTag::TUTORIAL:
+				nowScene = new Tutorial(&scene);
+				return;
+
+			case SceneTag::PLAY:
+				nowScene = new Play(&scene);
+				return;
+
+			case SceneTag::RESULT:
+				nowScene = new Result(&scene);
+				return;
+
+			default:
+				break;
+			}
+		}
+		nowScene->Update();
 	}
 
 	void SceneManager::Draw()
 	{
-		mScene->Draw();
-	}
-
-	void SceneManager::Finalize()
-	{
-		if (mScene)
-		{
-			delete mScene;
-			mScene = nullptr;
-		}
-	}
-
-	Scene* SceneManager::GetTitle()
-	{
-		return new Title;
-	}
-
-	Scene* SceneManager::GetTutorial()
-	{
-		return new Tutorial;
-	}
-
-	Scene* SceneManager::GetPlay()
-	{
-		return new Play;
-	}
-
-	Scene* SceneManager::GetResult()
-	{
-		return new Result;
+		nowScene->Draw();
 	}
 }

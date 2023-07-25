@@ -1,31 +1,28 @@
-#include "Result.h"
-
 // 必要なヘッダーファイルをインクルード
+#include<DxLib.h>
+#include"Result.h"
 
 namespace Scene
 {
-	Result::Result()
+	Result::Result() {}
+
+	Result::Result(SceneTag* ptr)
 	{
+		nextScene = ptr;	// シーン更新ポインタを設定
 	}
 
-	Result::~Result()
-	{
-	}
+	Result::~Result() {}
 
-	void Result::Initialize()
+	void Result::Update()
 	{
-	}
-
-	Scene* Result::Update()
-	{
-		return this;
 	}
 
 	void Result::Draw()
 	{
 	}
 
-	void Result::Finalize()
+	SceneTag Result::GetSceneTag()
 	{
+		return SceneTag::RESULT;
 	}
 }

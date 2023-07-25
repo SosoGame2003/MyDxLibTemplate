@@ -5,22 +5,23 @@
 
 namespace Scene
 {
-	class Result : public Scene
+	class Result : public SceneBase
 	{
 	public:
 		Result();
-		virtual ~Result();
 
 		/// <summary>
-		/// 初期化処理
+		/// コンストラクタ
 		/// </summary>
-		void Initialize() override;
+		/// <param name="ptr">シーン更新ポインタ</param>
+		Result(SceneTag* ptr);
+
+		~Result();
 
 		/// <summary>
 		/// 更新処理
 		/// </summary>
-		/// <returns></returns>
-		Scene* Update() override;
+		void Update() override;
 
 		/// <summary>
 		/// 描画処理
@@ -28,9 +29,10 @@ namespace Scene
 		void Draw() override;
 
 		/// <summary>
-		/// 後処理
+		/// シーンタグ所得用関数
 		/// </summary>
-		void Finalize() override;
+		/// <returns>シーンのタグ</returns>
+		SceneTag GetSceneTag() override;
 
 	private:
 

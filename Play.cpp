@@ -1,30 +1,29 @@
 // 必要なヘッダーファイルをインクルード
+#include<DxLib.h>
 #include"Play.h"
 
 namespace Scene
 {
-	Play::Play()
+	Play::Play() {}
+
+	Play::Play(SceneTag* ptr)
 	{
+		nextScene = ptr;	// シーン更新ポインタを設定
 	}
 
-	Play::~Play()
-	{
-	}
+	Play::~Play() {}
 
-	void Play::Initialize()
+	void Play::Update()
 	{
-	}
-
-	Scene* Play::Update()
-	{
-		return this;
 	}
 
 	void Play::Draw()
 	{
+		DrawString(900, 520, "Play", GetColor(255, 0, 0));	// テスト用(後で消す)
 	}
 
-	void Play::Finalize()
+	SceneTag Play::GetSceneTag()
 	{
+		return SceneTag::PLAY;
 	}
 }
