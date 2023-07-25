@@ -5,7 +5,7 @@ namespace Scene
 {
 	SceneManager::SceneManager()
 	{
-		scene = SceneTag::MENU;
+		scene	 = SceneTag::MENU;
 		nowScene = new MainMenu(&scene);
 	}
 

@@ -3,7 +3,7 @@
 
 ProcessingControl::ProcessingControl()
 {
-	mWindow = new Window();
+	mWindow		 = new Window();
 	sceneManager = SceneManager();
 }
 
