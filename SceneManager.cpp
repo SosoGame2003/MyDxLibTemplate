@@ -14,11 +14,6 @@ namespace Scene
 		nowScene->~SceneBase();
 	}
 
-	void SceneManager::Initialize()
-	{
-		nowScene->Initialize();
-	}
-
 	void SceneManager::Changer()
 	{
 		if (nowScene->GetSceneTag() != scene)

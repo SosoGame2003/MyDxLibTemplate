@@ -19,11 +19,6 @@ namespace Scene
 		~SceneManager();
 
 		/// <summary>
-		/// ‰Šú‰»ˆ—
-		/// </summary>
-		void Initialize();
-
-		/// <summary>
 		/// XVˆ—
 		/// </summary>
 		void Update();
