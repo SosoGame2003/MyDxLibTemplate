@@ -15,14 +15,19 @@ namespace Scene
 		virtual ~SceneBase() {};
 
 		/// <summary>
+		/// 初期化処理
+		/// </summary>
+		virtual void Initialize() {}
+
+		/// <summary>
 		/// 更新処理
 		/// </summary>
-		virtual void Update() {};
+		virtual void Update() {}
 
 		/// <summary>
 		/// 描画処理
 		/// </summary>
-		virtual void Draw() {};
+		virtual void Draw() {}
 
 		/// <summary>
 		/// シーンタグ所得用関数

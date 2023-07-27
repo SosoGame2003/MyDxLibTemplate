@@ -13,6 +13,10 @@ namespace Scene
 
 	Result::~Result() {}
 
+	void Result::Initialize()
+	{
+	}
+
 	void Result::Update()
 	{
 	}

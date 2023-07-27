@@ -15,6 +15,10 @@ namespace Scene
 
 	MainMenu::~MainMenu() {}
 
+	void MainMenu::Initialize()
+	{
+	}
+
 	void MainMenu::Update()
 	{
 		if (CheckHitKey(KEY_INPUT_RETURN))

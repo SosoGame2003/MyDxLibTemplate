@@ -19,6 +19,11 @@ namespace Scene
 		~SceneManager();
 
 		/// <summary>
+		/// 初期化処理
+		/// </summary>
+		void Initialize();
+
+		/// <summary>
 		/// 更新処理
 		/// </summary>
 		void Update();
@@ -29,6 +34,11 @@ namespace Scene
 		void Draw();
 
 	private:
+		/// <summary>
+		/// シーン切り替え
+		/// </summary>
+		void Changer();
+
 		SceneBase* nowScene;	// 現在のシーン
 		SceneTag scene;			// 動作しているシーンのタグ
 	};

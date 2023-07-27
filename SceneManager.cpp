@@ -14,7 +14,12 @@ namespace Scene
 		nowScene->~SceneBase();
 	}
 
-	void SceneManager::Update()
+	void SceneManager::Initialize()
+	{
+		nowScene->Initialize();
+	}
+
+	void SceneManager::Changer()
 	{
 		if (nowScene->GetSceneTag() != scene)
 		{
@@ -42,6 +47,12 @@ namespace Scene
 				break;
 			}
 		}
+	}
+
+	void SceneManager::Update()
+	{
+		Changer();
+
 		nowScene->Update();
 	}
 

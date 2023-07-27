@@ -13,6 +13,10 @@ namespace Scene
 
 	Tutorial::~Tutorial() {}
 
+	void Tutorial::Initialize()
+	{
+	}
+
 	void Tutorial::Update()
 	{
 		if (CheckHitKey(KEY_INPUT_RETURN))
@@ -24,7 +28,7 @@ namespace Scene
 
 	void Tutorial::Draw()
 	{
-		DrawString(900, 520, "Tutorial", GetColor(255, 0, 0));	// テスト用(後で消す)
+		DrawString(900, 520, "Tutorial", GetColor(0, 255, 0));	// テスト用(後で消す)
 	}
 
 	SceneTag Tutorial::GetSceneTag()

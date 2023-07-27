@@ -13,13 +13,22 @@ namespace Scene
 
 	Play::~Play() {}
 
+	void Play::Initialize()
+	{
+	}
+
 	void Play::Update()
 	{
+		if (CheckHitKey(KEY_INPUT_END))
+		{
+			*nextScene = SceneTag::MENU;	// シーン更新ポインタをプレイに設定
+			WaitTimer(100);
+		}
 	}
 
 	void Play::Draw()
 	{
-		DrawString(900, 520, "Play", GetColor(255, 0, 0));	// テスト用(後で消す)
+		DrawString(900, 520, "Play", GetColor(0, 0, 255));	// テスト用(後で消す)
 	}
 
 	SceneTag Play::GetSceneTag()

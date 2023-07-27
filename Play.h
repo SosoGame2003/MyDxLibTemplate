@@ -19,6 +19,11 @@ namespace Scene
 		~Play();
 
 		/// <summary>
+		/// ‰Šú‰»ˆ—
+		/// </summary>
+		void Initialize();
+
+		/// <summary>
 		/// XVˆ—
 		/// </summary>
 		void Update() override;
