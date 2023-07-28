@@ -28,7 +28,7 @@ namespace Scene
 
 	void Tutorial::Draw()
 	{
-		DrawString(900, 520, "Tutorial", GetColor(0, 255, 0));	// テスト用(後で消す)
+		DrawString(900, 520, "Tutorial\n(エンターキーでプレイ画面へ)", GetColor(0, 255, 0));	// テスト用(後で消す)
 	}
 
 	SceneTag Tutorial::GetSceneTag()

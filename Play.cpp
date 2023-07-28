@@ -28,7 +28,7 @@ namespace Scene
 
 	void Play::Draw()
 	{
-		DrawString(900, 520, "Play", GetColor(0, 0, 255));	// テスト用(後で消す)
+		DrawString(900, 520, "Play\n(エンドキーでメニューへ)", GetColor(0, 255, 255));	// テスト用(後で消す)
 	}
 
 	SceneTag Play::GetSceneTag()

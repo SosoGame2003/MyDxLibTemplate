@@ -26,11 +26,16 @@ namespace Scene
 			*nextScene = SceneTag::TUTORIAL;	// シーン更新ポインタをチュートリアルに設定
 			WaitTimer(100);
 		}
+		if (CheckHitKey(KEY_INPUT_SPACE))
+		{
+			*nextScene = SceneTag::PLAY;	// シーン更新ポインタをプレイに設定
+			WaitTimer(100);
+		}
 	}
 
 	void MainMenu::Draw()
 	{
-		DrawString(900, 520, "MainMenu", GetColor(255, 0, 0));	// テスト用(後で消す)
+		DrawString(900, 520, "MainMenu\n(エンターキーでチュートリアルへ)\n(スペースキーでプレイへ)", GetColor(255, 0, 0));	// テスト用(後で消す)
 	}
 
 	SceneTag MainMenu::GetSceneTag()

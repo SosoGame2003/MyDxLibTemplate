@@ -14,7 +14,6 @@ ProcessingControl::~ProcessingControl()
 void ProcessingControl::Initialize()
 {
 	mWindow->Show();
-	sceneManager.Initialize();
 }
 
 void ProcessingControl::Update()
