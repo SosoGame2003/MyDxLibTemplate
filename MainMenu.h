@@ -1,45 +1,16 @@
-#pragma once	// インクルードガード
+#pragma once
 
-// 必要なヘッダーファイルをインクルード
-#include"SceneBase.h"
+#include"Scene.h"
 
-namespace Scene
+class MainMenu : public Scene
 {
-	class MainMenu : public SceneBase
-	{
-	public:
-		MainMenu();
+public:
+	MainMenu();
+	~MainMenu();
 
-		/// <summary>
-		/// コンストラクタ
-		/// </summary>
-		/// <param name="ptr">シーン更新ポインタ</param>
-		MainMenu(SceneTag* ptr);
+	SCENE_TAG Update(float deltaTime) override;
+	void Draw() override;
 
-		~MainMenu();
-
-		/// <summary>
-		/// 初期化処理
-		/// </summary>
-		void Initialize();
-
-		/// <summary>
-		/// 更新処理
-		/// </summary>
-		void Update() override;
-
-		/// <summary>
-		/// 描画処理
-		/// </summary>
-		void Draw() override;
-
-		/// <summary>
-		/// シーンタグ所得用関数
-		/// </summary>
-		/// <returns>シーンのタグ</returns>
-		SceneTag GetSceneTag() override;
-
-	private:
-
-	};
-}
+private:
+	int g;
+};

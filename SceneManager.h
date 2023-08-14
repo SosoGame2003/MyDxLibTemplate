@@ -1,40 +1,32 @@
-#pragma once	// インクルードガード
+#pragma once
 
 // 必要なヘッダーファイルをインクルード
-#include"SceneBase.h"
-#include"MainMenu.h"
-#include"Tutorial.h"
-#include"Play.h"
-#include"Result.h"
+#include<DxLib.h>
+#include"Scene.h"
 
 /// <summary>
-/// シーン管理クラス
+/// シーンマネージャー
 /// </summary>
-namespace Scene
+class SceneManager
 {
-	class SceneManager
-	{
-	public:
-		SceneManager();
-		~SceneManager();
+public:
+	SceneManager();
+	~SceneManager();
 
-		/// <summary>
-		/// 更新処理
-		/// </summary>
-		void Update();
+	void GameLoop();
 
-		/// <summary>
-		/// 描画処理
-		/// </summary>
-		void Draw();
+	void SetNowScene(const SCENE_TAG& tag);
 
-	private:
-		/// <summary>
-		/// シーン切り替え
-		/// </summary>
-		void Changer();
+private:
+	void DeleteScene();
+	void SaveDeltaTime();
+	Scene* currentScene;
 
-		SceneBase* nowScene;	// 現在のシーン
-		SceneTag scene;			// 動作しているシーンのタグ
-	};
-}
+	float deltaTime;
+	int fps;
+	int fpsCounter;
+	LONGLONG currentTime;
+	LONGLONG time;
+	LONGLONG fpsCheckTime;
+
+};

@@ -2,132 +2,53 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <UniqueIdentifier>{c94d19b6-2284-4360-8fcf-60ca5547e952}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\MySystem">
-      <UniqueIdentifier>{f8a298a7-c685-4d80-af15-6c96eb9e8eac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\MySystem\Application">
-      <UniqueIdentifier>{4ea12fa9-b66d-4fd3-a356-eadb4ec1ea3c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\MySystem\Window">
-      <UniqueIdentifier>{1324ec6d-5d77-43af-b0d2-a4a463d0b7e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\MySystem\ProcessingControl">
-      <UniqueIdentifier>{9d592bcf-de4d-4427-844c-39724c497b73}</UniqueIdentifier>
+      <UniqueIdentifier>{72c3d877-b9bf-4d7b-92d7-ff5c2c5e6063}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Scene">
-      <UniqueIdentifier>{e0cd9519-ea7e-40d2-b608-b9653ea5d604}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Manager">
-      <UniqueIdentifier>{789083c6-b8d3-4682-aafd-9e8d4b97f03f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Base">
-      <UniqueIdentifier>{299fca1e-e48a-4814-831e-ddc863d166dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Title">
-      <UniqueIdentifier>{4de276af-c0f8-42ae-a552-c0d5ca63989e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Tutorial">
-      <UniqueIdentifier>{29dc5b98-244c-4a51-a89d-e6cae4f8d38f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Play">
-      <UniqueIdentifier>{66f8a574-0431-424f-8680-9bf38651a4d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Result">
-      <UniqueIdentifier>{3b99f888-2b04-4950-894e-1afd36f302cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameObject">
-      <UniqueIdentifier>{2b43ae49-fa39-442c-a35f-0b89017ac96f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameObject\Player">
-      <UniqueIdentifier>{625cd5ca-7734-4447-a023-c79fc31eb4b5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameObject\Manager">
-      <UniqueIdentifier>{1941dc6c-e2cd-4d74-8901-2302a527a5ef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\GameObject\Base">
-      <UniqueIdentifier>{b95d6497-5160-4e0f-9a27-87f2f6540caf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Scene\Tag">
-      <UniqueIdentifier>{133c83ed-2f8f-42d0-bf2e-3df55d96fc47}</UniqueIdentifier>
+      <UniqueIdentifier>{90da1a31-c2dc-48d9-91ca-a1b750d172aa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source\MySystem</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source\MySystem\Window</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessingControl.cpp">
-      <Filter>Source\MySystem\ProcessingControl</Filter>
-    </ClCompile>
     <ClCompile Include="Application.cpp">
-      <Filter>Source\MySystem\Application</Filter>
+      <Filter>Source\MySystem</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>Source\Scene\Manager</Filter>
+      <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
-      <Filter>Source\Scene\Title</Filter>
-    </ClCompile>
-    <ClCompile Include="Tutorial.cpp">
-      <Filter>Source\Scene\Tutorial</Filter>
+      <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Play.cpp">
-      <Filter>Source\Scene\Play</Filter>
+      <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Result.cpp">
-      <Filter>Source\Scene\Result</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectManager.cpp">
-      <Filter>Source\GameObject\Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source\GameObject\Player</Filter>
+      <Filter>Source\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
-      <Filter>Source\MySystem\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="ProcessingControl.h">
-      <Filter>Source\MySystem\ProcessingControl</Filter>
-    </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Source\MySystem\Application</Filter>
+      <Filter>Source\MySystem</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
-      <Filter>Source\Scene\Manager</Filter>
+      <Filter>Source\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="SceneBase.h">
-      <Filter>Source\Scene\Base</Filter>
+    <ClInclude Include="Scene.h">
+      <Filter>Source\Scene</Filter>
     </ClInclude>
     <ClInclude Include="MainMenu.h">
-      <Filter>Source\Scene\Title</Filter>
-    </ClInclude>
-    <ClInclude Include="Tutorial.h">
-      <Filter>Source\Scene\Tutorial</Filter>
+      <Filter>Source\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Play.h">
-      <Filter>Source\Scene\Play</Filter>
+      <Filter>Source\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Result.h">
-      <Filter>Source\Scene\Result</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjectManager.h">
-      <Filter>Source\GameObject\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Source\GameObject\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjectBase.h">
-      <Filter>Source\GameObject\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneTag.h">
-      <Filter>Source\Scene\Tag</Filter>
+      <Filter>Source\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,14 +1,11 @@
 // 必要なヘッダーファイルをインクルード
+#include<Windows.h>
 #include"Application.h"
 
-int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, INT nShowCmd)
 {
-	Application* mApp;
-	mApp = new Application;
-
-	mApp->Initialize();
-	mApp->GameLoop();
-	mApp->Finalize();
+	Application app;
+	app.GameLoop();
 
 	return 0;
 }

@@ -1,50 +1,33 @@
 // 必要なヘッダーファイルをインクルード
+#include<DxLib.h>
 #include"Application.h"
+#include"SceneManager.h"
+#include"Scene.h"
 
 Application::Application()
 {
-	DxLib_Init();	// DXライブラリ初期化処理
+	SetMainWindowText("Sample");				// ウィンドウのタイトルを変更
+	SetGraphMode(ScreenSizeX, ScreenSizeY, ColorBitDepth);	// 画面モードの変更
+	ChangeWindowMode(TRUE);							// ウィンドウモード・フルスクリーンモードの変更
+	SetWaitVSyncFlag(TRUE);							// ScreenFlip関数実行時にＣＲＴの垂直同期信号待ちをするか
+	SetOutApplicationLogValidFlag(FALSE);				// ログ出力を行うか否か
 
-	mProcessCtrl = new ProcessingControl();
+	DxLib_Init();											// DXライブラリ初期化
+	SetDrawScreen(DX_SCREEN_BACK);					// 描画先グラフィック領域の指定
+
+	sceneMgr = new SceneManager();
+	sceneMgr->SetNowScene(SCENE_TAG::MENU);
 }
 
 Application::~Application()
 {
-}
+	delete sceneMgr;
+	sceneMgr = 0;
 
-void Application::Initialize()
-{
-	mProcessCtrl->Initialize();
+	DxLib_End();
 }
 
 void Application::GameLoop()
 {
-	while (ProcessMessage() == 0)
-	{
-
-		ClearDrawScreen();	// 画面更新処理
-
-		// 更新処理
-		mProcessCtrl->Update();
-
-		// 描画処理
-		mProcessCtrl->Draw();
-
-		ScreenFlip();	// 描画確定
-
-		// ESCAPEキーが押されたらループを抜ける
-		if (CheckHitKey(KEY_INPUT_ESCAPE))
-		{
-			break;
-		}
-	}
-}
-
-void Application::Finalize()
-{
-	mProcessCtrl->Finalize();
-	delete mProcessCtrl;
-	mProcessCtrl = nullptr;
-
-	DxLib_End();	// DXライブラリ終了処理
+	sceneMgr->GameLoop();
 }

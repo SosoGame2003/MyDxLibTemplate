@@ -2,37 +2,31 @@
 #include<DxLib.h>
 #include"Play.h"
 
-namespace Scene
+Play::Play()
 {
-	Play::Play() {}
+	g = LoadGraph("Data/Graph/DummyPlay.png");
+}
 
-	Play::Play(SceneTag* ptr)
+Play::~Play()
+{
+}
+
+SCENE_TAG Play::Update(float deltaTime)
+{
+	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
-		nextScene = ptr;	// シーン更新ポインタを設定
+		return SCENE_TAG::RESULT;
 	}
 
-	Play::~Play() {}
-
-	void Play::Initialize()
+	if (CheckHitKey(KEY_INPUT_END))
 	{
+		return SCENE_TAG::MENU;
 	}
 
-	void Play::Update()
-	{
-		if (CheckHitKey(KEY_INPUT_END))
-		{
-			*nextScene = SceneTag::MENU;	// シーン更新ポインタをプレイに設定
-			WaitTimer(100);
-		}
-	}
+	return SCENE_TAG::NONE;
+}
 
-	void Play::Draw()
-	{
-		DrawString(900, 520, "Play\n(エンドキーでメニューへ)", GetColor(0, 255, 255));	// テスト用(後で消す)
-	}
-
-	SceneTag Play::GetSceneTag()
-	{
-		return SceneTag::PLAY;
-	}
+void Play::Draw()
+{
+	DrawGraph(0, 0, g, TRUE);
 }
