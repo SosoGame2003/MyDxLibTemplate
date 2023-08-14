@@ -4,7 +4,7 @@
 
 Result::Result()
 {
-	LoadGraph("Data/Graph/DummyResult.png");
+	g = LoadGraph("Data/Graph/DummyResult.png");
 }
 
 Result::~Result()
@@ -23,4 +23,5 @@ SCENE_TAG Result::Update(float deltaTime)
 
 void Result::Draw()
 {
+	DrawGraph(0, 0, g, TRUE);
 }
